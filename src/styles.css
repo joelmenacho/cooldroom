@@ -95,6 +95,12 @@ button { appearance: none; }
   backdrop-filter: blur(10px);
 }
 
+.card:hover {
+  border-color: rgba(15, 76, 201, 0.2);
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+
 .cardSoft {
   background: var(--card-soft);
 }
@@ -156,6 +162,7 @@ button { appearance: none; }
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
 }
 
+.btn:active { transform: scale(0.97); }
 .btn:hover { transform: translateY(-1px); border-color: var(--line-strong); }
 .btn:disabled { cursor: not-allowed; transform: none; }
 
@@ -228,6 +235,18 @@ textarea:focus {
   border-radius: 18px;
   padding: 18px;
   box-shadow: var(--shadow-soft);
+}
+
+.kpi.kpiOk { 
+  border-left: 3px solid var(--ok); 
+}
+
+.kpi.kpiWarn { 
+  order-left: 3px solid #f59e0b; 
+}
+
+.kpi.kpiDanger { 
+  border-left: 3px solid var(--danger); 
 }
 
 .kpi .v {
@@ -333,6 +352,7 @@ textarea:focus {
   color: var(--primary-strong);
   background: var(--primary-soft);
   border-color: rgba(15, 76, 201, 0.18);
+  box-shadow: inset 3px 0 0 var(--primary); /* barra lateral azul */
 }
 
 .authShell {
